@@ -14,8 +14,14 @@
     http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd        
     ">
 
-   <context:component-scan base-package="web.com.gadgetcompare.controller"/>
+   <context:component-scan base-package="web.com.gadgetcompare.controller" />
+   <context:component-scan base-package="web.com.gadgetbackend.daoimpl"/> 
+   
+   <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="cacheSeconds" value="0"/>
 
+    </bean>
+    
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		
@@ -26,4 +32,5 @@
 	<mvc:annotation-driven />
 	
 	<mvc:resources location="/assets/" mapping="/resources/**" cache-period="31556926"/>
+
    </beans>

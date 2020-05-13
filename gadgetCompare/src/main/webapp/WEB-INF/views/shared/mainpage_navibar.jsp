@@ -20,7 +20,8 @@
             <a class="nav-link" href="${contextRoot}/about">About</a>
           </li>
           <li id="service" class="nav-item">
-            <a class="nav-link" href="${contextRoot}/service">Product List</a>
+            <a class="nav-link" href="${contextRoot}/show/all/products">All Product List</a>
+           
           </li>
           <li id="contact" class="nav-item">
             <a class="nav-link" href="${contextRoot}/contact">Contact Us</a>

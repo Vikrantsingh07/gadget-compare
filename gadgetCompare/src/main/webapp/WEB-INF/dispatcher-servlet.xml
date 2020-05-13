@@ -13,9 +13,10 @@
     http://www.springframework.org/schema/webflow-config
     http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd        
     ">
+<!-- Provide support for component scanning -->  
+   <context:component-scan base-package="web.com.gadgetcompare" />
+   <context:component-scan base-package="web.com.gadgetbackend"/> 
 
-   <context:component-scan base-package="web.com.gadgetcompare.controller" />
-   <context:component-scan base-package="web.com.gadgetbackend.daoimpl"/> 
    
    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="cacheSeconds" value="0"/>
@@ -31,6 +32,6 @@
    <!-- Loading static resources -->
 	<mvc:annotation-driven />
 	
-	<mvc:resources location="/assets/" mapping="/resources/**" cache-period="31556926"/>
+	<mvc:resources location="/assets/" mapping="/resources/**" /><!-- cache-period="31556926" -->
 
    </beans>
